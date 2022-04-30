@@ -64,7 +64,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="-- ReFrameWork - Robotic Enterprise Framework --&#xA;-- TEMPLATE--" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="786,786" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -78,9 +77,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get next transaction input data" DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1247,2737" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get next transaction input data" DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="231,97" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
-        <Sequence sap2010:Annotation.AnnotationText="Data retrieval mechanism. The TransactionNumber variable holds the current transaction number. Incrementing this number means getting the next transaction. For a robot retry, the number is not increased, in case of application exception, until the max retry number.&#xA;TransactionItem type needs to be changed accordingly." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="1221,2317" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Data retrieval mechanism. The TransactionNumber variable holds the current transaction number. Incrementing this number means getting the next transaction. For a robot retry, the number is not increased, in case of application exception, until the max retry number.&#xA;TransactionItem type needs to be changed accordingly." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="1221,3071" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="ShouldStop" />
           </Sequence.Variables>
@@ -91,16 +90,16 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:ShouldStop DisplayName="Check Stop Signal" sap:VirtualizedContainerService.HintSize="1199,22" sap2010:WorkflowViewState.IdRef="ShouldStop_1" Result="[ShouldStop]" />
-          <If Condition="[ShouldStop]" DisplayName="Should Stop or Get Next" sap:VirtualizedContainerService.HintSize="1199,2071" sap2010:WorkflowViewState.IdRef="If_8">
+          <If Condition="[ShouldStop]" DisplayName="Should Stop or Get Next" sap:VirtualizedContainerService.HintSize="1199,2828" sap2010:WorkflowViewState.IdRef="If_8">
             <If.Then>
-              <Sequence DisplayName="Orchestrator stop requested" sap:VirtualizedContainerService.HintSize="336,317" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Orchestrator stop requested" sap:VirtualizedContainerService.HintSize="336,315" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Stop message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Stop process requested&quot;]" />
+                <ui:LogMessage DisplayName="Log Stop message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;Stop process requested&quot;]" />
                 <Assign DisplayName="End Process" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                   <Assign.To>
                     <OutArgument x:TypeArguments="sd:DataTable">[TransactionItem]</OutArgument>
@@ -112,7 +111,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <TryCatch DisplayName="Try GetTransactionData" sap:VirtualizedContainerService.HintSize="838,1921" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+              <TryCatch DisplayName="Try GetTransactionData" sap:VirtualizedContainerService.HintSize="838,2680" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,13 +119,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="820,1689" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence sap:VirtualizedContainerService.HintSize="820,2452" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[statusProcess = &quot;Success&quot; or Message_Error IsNot Nothing]" sap:VirtualizedContainerService.HintSize="798,1565" sap2010:WorkflowViewState.IdRef="If_10">
+                    <If Condition="[statusProcess = &quot;Success&quot; or Message_Error IsNot Nothing]" sap:VirtualizedContainerService.HintSize="798,2328" sap2010:WorkflowViewState.IdRef="If_10">
                       <If.Then>
                         <Assign DisplayName="End Process" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_25">
                           <Assign.To>
@@ -138,7 +137,7 @@
                         </Assign>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Work Nornal" sap:VirtualizedContainerService.HintSize="531,1415" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <Sequence DisplayName="Work Nornal" sap:VirtualizedContainerService.HintSize="531,2180" sap2010:WorkflowViewState.IdRef="Sequence_24">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="TransectionCount" />
                           </Sequence.Variables>
@@ -158,8 +157,8 @@
                               <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_TransactionData">[TransactionData]</InOutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Get Transection Data&quot;]" />
-                          <TryCatch DisplayName="Try Catch - List Sales Order From SAP" sap:VirtualizedContainerService.HintSize="509,319" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,91" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Get Transection Data&quot;]" />
+                          <TryCatch DisplayName="Try Catch - List Sales Order From SAP" sap:VirtualizedContainerService.HintSize="509,1088" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                             <TryCatch.Try>
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SAP_ListOfSalesOrder workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="SAP\SAP_ListOfSalesOrder.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
@@ -170,10 +169,10 @@
                               </ui:InvokeWorkflowFile>
                             </TryCatch.Try>
                             <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,926" sap2010:WorkflowViewState.IdRef="Catch`1_8">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -230,7 +229,7 @@
                                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                         </ui:HttpClient.UrlSegments>
                                       </ui:HttpClient>
-                                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+errorMsgListSales]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+                                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+errorMsgListSales]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
                                         <ui:SendMail.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                                         </ui:SendMail.Files>
@@ -241,7 +240,7 @@
                               </Catch>
                             </TryCatch.Catches>
                           </TryCatch>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;Assign data To TransectionItem&quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;Assign data To TransectionItem&quot;]" />
                           <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="509,289" sap2010:WorkflowViewState.IdRef="CommentOut_45">
                             <ui:CommentOut.Body>
                               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_76">
@@ -346,7 +345,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="211,142" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="444,1147" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="418,691" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
@@ -851,7 +850,7 @@
                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                         </ui:HttpClient.UrlSegments>
                       </ui:HttpClient>
-                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+Message_Error]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+Message_Error]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
                         <ui:SendMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                             <InArgument x:TypeArguments="x:String">[Config("SUMMARY_REPORT_PATH").ToString+"SUMMART_REPORT_"+now.AddDays(-1).ToString("dd.MM.yyyy")+".xlsx"]</InArgument>
