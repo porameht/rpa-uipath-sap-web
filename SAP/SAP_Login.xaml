@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1120,5227</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1120,5247</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,5147" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,5167" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SAP_Password_String" />
       <Variable x:TypeArguments="ss:SecureString" Name="SAP_Password" />
@@ -74,10 +74,10 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SharePoint" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="1058,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Kill SAP (SAP_Login)&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Kill SAP (SAP_Login)&quot;]" />
     <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill SAP" sap:VirtualizedContainerService.HintSize="1058,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Open SAP...&quot; + Date.Now.ToString(&quot;HHmmss&quot;)]" />
-    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3712" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Open SAP...&quot; + Date.Now.ToString(&quot;HHmmss&quot;)]" />
+    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3720" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="i" />
       </Sequence.Variables>
@@ -141,7 +141,7 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Opening SAP 740&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Opening SAP 740&quot;]" />
       <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'saplogon.exe SAP'" FileName="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" sap:VirtualizedContainerService.HintSize="500,292" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="926b8b56da68dd2636941ad81c9b8572" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP Logon 740' /&gt;">
         <ui:OpenApplication.Body>
           <ActivityAction x:TypeArguments="x:Object">
@@ -185,7 +185,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'list item  SAP/HANA'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="DEV SAP/HANA'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -228,7 +228,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:WindowScope>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Select server : SAP/HANA&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Select server : SAP/HANA&quot;]" />
       <Assign DisplayName="Assign i = 1" sap:VirtualizedContainerService.HintSize="500,60" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
@@ -237,19 +237,19 @@
           <InArgument x:TypeArguments="x:Int32">1</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach SAP : Login" sap:VirtualizedContainerService.HintSize="500,1240" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="f53065fabbb7ee541b6d91c6ec10198a" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach SAP : Login" sap:VirtualizedContainerService.HintSize="500,1244" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="f53065fabbb7ee541b6d91c6ec10198a" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
         <ui:WindowScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1094" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1098" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,665" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+              <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,667" sap2010:WorkflowViewState.IdRef="DoWhile_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,7 +292,7 @@
                   </Assign>
                 </Sequence>
               </DoWhile>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;SAP Username : &quot;+SAP_Username]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,93" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;SAP Username : &quot;+SAP_Username]" />
               <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type SAP_Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[SAP_Password_String+ &quot;[k(enter)]&quot;]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="58e808b1a33c1b54e912271ffad16a14" Selector="&lt;sap id='usr/pwdRSYST-BCODE' /&gt;" WaitForReady="COMPLETE" />
@@ -320,7 +320,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="painText">[paneText]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[paneText = &quot;Enter a new password&quot;]" sap:VirtualizedContainerService.HintSize="1058,758" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[paneText = &quot;Enter a new password&quot;]" sap:VirtualizedContainerService.HintSize="1058,766" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -328,14 +328,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Enter a new password" sap:VirtualizedContainerService.HintSize="336,462" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Enter a new password" sap:VirtualizedContainerService.HintSize="336,466" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;PaneText : &quot;+paneText]" />
-          <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;Password หมดอายุกรุณาทำการ Update Password : &quot;+paneText]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;PaneText : &quot;+paneText]" />
+          <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;Password หมดอายุกรุณาทำการ Update Password : &quot;+paneText]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,147" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
             </ui:SendMail.Files>
@@ -344,7 +344,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <If Condition="[paneText.Contains(&quot;incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="697,610" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[paneText.Contains(&quot;incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="697,616" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -352,14 +352,14 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="336,462" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence sap:VirtualizedContainerService.HintSize="336,466" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;PaneText : &quot;+paneText]" />
-              <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;Password ไม่ถูกต้องกรุณาทำการตรวจสอบ : &quot;+paneText]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;PaneText : &quot;+paneText]" />
+              <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th" Body="[&quot;Password ไม่ถูกต้องกรุณาทำการตรวจสอบ : &quot;+paneText]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,147" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
                 <ui:SendMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                 </ui:SendMail.Files>
@@ -368,13 +368,13 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence sap:VirtualizedContainerService.HintSize="336,215" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence sap:VirtualizedContainerService.HintSize="336,217" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;SAP Login successful.&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;SAP Login successful.&quot;]" />
             </Sequence>
           </If.Else>
         </If>

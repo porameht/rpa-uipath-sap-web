@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>759,5465</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>759,5477</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="719,5385" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="719,5397" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strDateNow" />
       <Variable x:TypeArguments="x:String" Name="checkStatusData" />
@@ -69,8 +69,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;&gt;&gt;&gt; Start Process Date on : &quot;+strDateNow]" />
-    <Sequence DisplayName="SAP_CreateSalesOrder" sap:VirtualizedContainerService.HintSize="697,4999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,93" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;&gt;&gt;&gt; Start Process Date on : &quot;+strDateNow]" />
+    <Sequence DisplayName="SAP_CreateSalesOrder" sap:VirtualizedContainerService.HintSize="697,5007" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strOrderType3" />
         <Variable x:TypeArguments="x:String" Name="strOrderType4" />
@@ -84,13 +84,13 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="675,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting...... SAP Login&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="675,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting...... SAP Login&quot;]" />
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SAP_Login workflow" sap:VirtualizedContainerService.HintSize="675,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SAP\SAP_Login.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="675,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;VA05 - List of Sales Orders&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="675,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;VA05 - List of Sales Orders&quot;]" />
       <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675,594" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" WorkbookPath="[in_Config(&quot;Path_CreateBy&quot;).ToString]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
@@ -203,7 +203,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="476953d032403df6071f15f80a779633" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders' /&gt;&lt;sap id='usr/btn%_SERNAM_%_APP_%-VALU_PUSH' /&gt;" WaitForReady="COMPLETE" />
         </ui:Click.Target>
       </ui:Click>
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Create By Number" sap:VirtualizedContainerService.HintSize="675,506" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Create By Number" sap:VirtualizedContainerService.HintSize="675,507" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -270,7 +270,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="357954b6421f71504e78225cb7678791" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders' /&gt;&lt;sap id='usr/btn%_SVTWEG_%_APP_%-VALU_PUSH' /&gt;" WaitForReady="INTERACTIVE" />
         </ui:Click.Target>
       </ui:Click>
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Channel Number" sap:VirtualizedContainerService.HintSize="675,506" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Channel Number" sap:VirtualizedContainerService.HintSize="675,507" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -339,7 +339,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="26a2d9c571629f58dbf5abd2df8c456f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders (*)' /&gt;&lt;sap id='titl' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
-      <If Condition="[Not listSalesOrderFirm]" sap:VirtualizedContainerService.HintSize="675,440" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[Not listSalesOrderFirm]" sap:VirtualizedContainerService.HintSize="675,442" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
           <Sequence sap:VirtualizedContainerService.HintSize="336,292" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
@@ -359,10 +359,10 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Found Documents Sales Order&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Found Documents Sales Order&quot;]" />
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; SAP User Fill Already&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; SAP User Fill Already&quot;]" />
   </Sequence>
 </Activity>
