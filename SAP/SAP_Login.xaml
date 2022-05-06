@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1120,5231</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1120,4809</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,5151" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,4729" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SAP_Password_String" />
       <Variable x:TypeArguments="ss:SecureString" Name="SAP_Password" />
@@ -77,7 +77,7 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Kill SAP (SAP_Login)&quot;]" />
     <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill SAP" sap:VirtualizedContainerService.HintSize="1058,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Open SAP...&quot; + Date.Now.ToString(&quot;HHmmss&quot;)]" />
-    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3712" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3290" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="i" />
       </Sequence.Variables>
@@ -103,7 +103,7 @@
           </Assign.Value>
         </Assign>
       </Sequence>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="500,262" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="500,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
@@ -121,8 +121,14 @@
             </Assign>
           </Sequence>
         </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="500,262" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="500,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
@@ -140,6 +146,12 @@
             </Assign>
           </Sequence>
         </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Opening SAP 740&quot;]" />
       <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'saplogon.exe SAP'" FileName="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" sap:VirtualizedContainerService.HintSize="500,292" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="926b8b56da68dd2636941ad81c9b8572" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP Logon 740' /&gt;">
@@ -177,9 +189,9 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="CommentOut_9">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_20">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

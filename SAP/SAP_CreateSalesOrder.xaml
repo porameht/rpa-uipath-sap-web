@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SAP_CreateSalesOrder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SAP_CreateSalesOrder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>759,5470</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>759,5712</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,13 +56,16 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="719,5390" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="719,5632" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strDateNow" />
       <Variable x:TypeArguments="x:String" Name="checkStatusData" />
       <Variable x:TypeArguments="x:Boolean" Name="listSalesOrderFirm" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+      <Variable x:TypeArguments="x:String" Name="Username" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -70,7 +73,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;&gt;&gt;&gt; Start Process Date on : &quot;+strDateNow]" />
-    <Sequence DisplayName="SAP_CreateSalesOrder" sap:VirtualizedContainerService.HintSize="697,5002" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="SAP_CreateSalesOrder" sap:VirtualizedContainerService.HintSize="697,5246" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strOrderType3" />
         <Variable x:TypeArguments="x:String" Name="strOrderType4" />
@@ -270,7 +273,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="357954b6421f71504e78225cb7678791" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders' /&gt;&lt;sap id='usr/btn%_SVTWEG_%_APP_%-VALU_PUSH' /&gt;" WaitForReady="INTERACTIVE" />
         </ui:Click.Target>
       </ui:Click>
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Channel Number" sap:VirtualizedContainerService.HintSize="675,507" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtSalesCreateBy]" DisplayName="For Each Row - Fill Channel Number" sap:VirtualizedContainerService.HintSize="675,506" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -339,9 +342,15 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="26a2d9c571629f58dbf5abd2df8c456f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders (*)' /&gt;&lt;sap id='titl' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
-      <If Condition="[Not listSalesOrderFirm]" sap:VirtualizedContainerService.HintSize="675,442" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[Not listSalesOrderFirm]" sap:VirtualizedContainerService.HintSize="675,687" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence sap:VirtualizedContainerService.HintSize="336,292" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap:VirtualizedContainerService.HintSize="336,539" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -355,14 +364,20 @@
                 <OutArgument x:TypeArguments="x:String">[checkStatusData]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SharePoint" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]" />
+            <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำ Process SCGCBM SDS_Direct ค่งแรงมุงหลังคา ประจำวันที่ &quot;+strDateNow+&quot; ไม่พบข้อมูล Sales Document บน SAP : &quot;+ checkStatusData]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังคา ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+              <ui:SendMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+              </ui:SendMail.Files>
+            </ui:SendMail>
             <Throw Exception="[New Uipath.Core.BusinessRuleException(&quot;Not Found Document&quot;)]" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
           </Sequence>
         </If.Then>
         <If.Else>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Found Documents Sales Order&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Found Documents Sales Order&quot;]" />
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; SAP User Fill Already&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; SAP User Fill Already&quot;]" />
   </Sequence>
 </Activity>

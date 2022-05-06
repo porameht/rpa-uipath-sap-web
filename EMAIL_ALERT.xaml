@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>811,4875</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1006,4549</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -66,7 +66,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EMAIL_ALERT" sap:VirtualizedContainerService.HintSize="771,4795" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EMAIL_ALERT" sap:VirtualizedContainerService.HintSize="966,4469" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strSalesDoc" />
       <Variable x:TypeArguments="x:String" Name="strPONO" />
@@ -106,22 +106,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_DataError isnot nothing]" DisplayName="if " sap:VirtualizedContainerService.HintSize="749,4671" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[in_DataError isnot nothing]" DisplayName="if " sap:VirtualizedContainerService.HintSize="944,4345" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Init &gt; System Error &quot;]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Init &gt; System Error &quot;]" />
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Send Email " sap:VirtualizedContainerService.HintSize="410,4523" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="Send Email " sap:VirtualizedContainerService.HintSize="605,4195" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:BuildDataTable DataTable="[dt_GenReport]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="388,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;สถานะการทำงานของบอท&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;สถานะข้อมูล&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;แนบไฟล์_x0020_PO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Created_x0020_on_x0020_SAP&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Created_x0020_by&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ServiceOrderNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DeliveryNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PONumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sold-To_x0020_Party&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sold-To_x0020_Party_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ship-To_x0020_Party&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ship-To_x0020_Party_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;แปลง&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;แบบ&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_x0020_Description&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Net_x0020_Value_x0020__x003A__x0020_SO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Net_x0020_Price_x0020__x003A__x0020_PO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;หมายเหตุ_x0020_SDS_x0020_TEXT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;สถานะการเก็บข้อมูล_x0020_SAP&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SharePoint" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="388,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
-          <ui:ReadTextFile Content="[strBodyTemplate]" DisplayName="Read Text File" FileName="[in_Config(&quot;Path_Mail&quot;).ToString+&quot;Template_Email_All.txt&quot;]" sap:VirtualizedContainerService.HintSize="388,59" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-          <Assign sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+          <ui:BuildDataTable DataTable="[dt_GenReport]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="583,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;สถานะการทำงานของบอท&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;สถานะข้อมูล&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;แนบไฟล์_x0020_PO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Created_x0020_on_x0020_SAP&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Created_x0020_by&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ServiceOrderNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DeliveryNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PONumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sold-To_x0020_Party&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sold-To_x0020_Party_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ship-To_x0020_Party&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ship-To_x0020_Party_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;แปลง&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;แบบ&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_x0020_Description&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Net_x0020_Value_x0020__x003A__x0020_SO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Net_x0020_Price_x0020__x003A__x0020_PO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;หมายเหตุ_x0020_SDS_x0020_TEXT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;สถานะการเก็บข้อมูล_x0020_SAP&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SharePoint" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="583,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
+          <ui:ReadTextFile Content="[strBodyTemplate]" DisplayName="Read Text File" FileName="[in_Config(&quot;Path_Mail&quot;).ToString+&quot;Template_Email_All.txt&quot;]" sap:VirtualizedContainerService.HintSize="583,59" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+          <Assign sap:VirtualizedContainerService.HintSize="583,60" sap2010:WorkflowViewState.IdRef="Assign_16">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[dateMail]</OutArgument>
             </Assign.To>
@@ -129,19 +129,19 @@
               <InArgument x:TypeArguments="x:String">[now.AddDays(-1).ToString("dd.MM.yyyy")]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_dataAfterProcess]" DisplayName="For Each Row - Data After Process" sap:VirtualizedContainerService.HintSize="388,3523" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_dataAfterProcess]" DisplayName="For Each Row - Data After Process" sap:VirtualizedContainerService.HintSize="583,3191" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="358,3375" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence sap:VirtualizedContainerService.HintSize="553,3042" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="336,2323" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence sap:VirtualizedContainerService.HintSize="531,2826" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ui:GenericValue" Name="strPONumber" />
                     </Sequence.Variables>
@@ -151,7 +151,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_39">
                       <Assign.To>
                         <OutArgument x:TypeArguments="ui:GenericValue">[strPONumber]</OutArgument>
                       </Assign.To>
@@ -159,7 +159,35 @@
                         <InArgument x:TypeArguments="ui:GenericValue">[row("GetDataPONumber").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - Date" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                    <If Condition="[string.IsNullOrEmpty(strPONumber) or string.IsNullOrWhiteSpace(strPONumber)]" DisplayName="If - Check PO Number" sap:VirtualizedContainerService.HintSize="509,210" sap2010:WorkflowViewState.IdRef="If_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="ui:GenericValue">[strPONumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="ui:GenericValue">["ไม่พบหมายเลข PO"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </If.Then>
+                      <If.Else>
+                        <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="ui:GenericValue">[strPONumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="ui:GenericValue">[strPONumber]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </If.Else>
+                    </If>
+                    <Assign DisplayName="Assign - Date" sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_19">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strDateNow]</OutArgument>
                       </Assign.To>
@@ -167,7 +195,7 @@
                         <InArgument x:TypeArguments="x:String">[row("CreateOnSap").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - Date and Time" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign DisplayName="Assign - Date and Time" sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_20">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strDataAndTime]</OutArgument>
                       </Assign.To>
@@ -175,7 +203,7 @@
                         <InArgument x:TypeArguments="x:String">[row("DataAndTime").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - Created by" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                    <Assign DisplayName="Assign - Created by" sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_21">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strCreatedBy]</OutArgument>
                       </Assign.To>
@@ -183,7 +211,7 @@
                         <InArgument x:TypeArguments="x:String">[row("Create By").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Assign - ServiceOrderNumber" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                    <Assign DisplayName="Assign - ServiceOrderNumber" sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_22">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strServiceOrderNumber]</OutArgument>
                       </Assign.To>
@@ -191,7 +219,7 @@
                         <InArgument x:TypeArguments="x:String">[row("ServiceOrderNumber").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_23">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strDeliveryNumber]</OutArgument>
                       </Assign.To>
@@ -199,7 +227,35 @@
                         <InArgument x:TypeArguments="x:String">[row("ServiceDeliveryNumber").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                    <If Condition="[string.IsNullOrEmpty(strDeliveryNumber) or string.IsNullOrWhiteSpace(strDeliveryNumber)]" DisplayName="If - Check DN Number" sap:VirtualizedContainerService.HintSize="509,210" sap2010:WorkflowViewState.IdRef="If_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_42">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strDeliveryNumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">ไม่พบหมายเลข DN</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </If.Then>
+                      <If.Else>
+                        <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_43">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strDeliveryNumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[strDeliveryNumber]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </If.Else>
+                    </If>
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_24">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strSoldToParty]</OutArgument>
                       </Assign.To>
@@ -207,7 +263,7 @@
                         <InArgument x:TypeArguments="x:String">[row("SoldtoCode").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_25">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strSoldToName]</OutArgument>
                       </Assign.To>
@@ -215,7 +271,7 @@
                         <InArgument x:TypeArguments="x:String">[row("SoldtoName").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_26">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strShipToPartName]</OutArgument>
                       </Assign.To>
@@ -223,7 +279,7 @@
                         <InArgument x:TypeArguments="x:String">[row("สถานที่ก่อสร้าง").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_27">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_27">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strShipToPartCode]</OutArgument>
                       </Assign.To>
@@ -231,7 +287,7 @@
                         <InArgument x:TypeArguments="x:String">[row("ShipToPartyCode").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_28">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strPain]</OutArgument>
                       </Assign.To>
@@ -239,7 +295,7 @@
                         <InArgument x:TypeArguments="x:String">[row("แปลง").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_29">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strDrawing]</OutArgument>
                       </Assign.To>
@@ -247,7 +303,7 @@
                         <InArgument x:TypeArguments="x:String">[row("ชื่อแบบ").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_30">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strItemDescription]</OutArgument>
                       </Assign.To>
@@ -255,7 +311,7 @@
                         <InArgument x:TypeArguments="x:String">[row("Item Description").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_31">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strNetValueSo]</OutArgument>
                       </Assign.To>
@@ -263,7 +319,7 @@
                         <InArgument x:TypeArguments="x:String">[row("Net Value").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_32">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strNetPricePO]</OutArgument>
                       </Assign.To>
@@ -271,7 +327,7 @@
                         <InArgument x:TypeArguments="x:String">[row("GetDataNetPrice").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strStatusSAP]</OutArgument>
                       </Assign.To>
@@ -279,7 +335,7 @@
                         <InArgument x:TypeArguments="x:String">[row("Result").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_35">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strStatusData]</OutArgument>
                       </Assign.To>
@@ -287,7 +343,7 @@
                         <InArgument x:TypeArguments="x:String">[row("ResultBUC").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[strStatusData.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="314,51" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[strStatusData.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="509,52" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -336,7 +392,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                    <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_34">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[strSDSTEXT]</OutArgument>
                       </Assign.To>
@@ -344,9 +400,9 @@
                         <InArgument x:TypeArguments="x:String">[row("TextHeader").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Add Data Row&quot;]" />
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strStatusBot,&#xA;strStatusData,&#xA;strDataAndTime,&#xA;strDateNow,&#xA;strCreatedBy,&#xA;strServiceOrderNumber,&#xA;strDeliveryNumber,&#xA;strPONumber,&#xA;strSoldToParty,&#xA;strSoldToName,&#xA;strShipToPartCode,&#xA;strShipToPartName,&#xA;strPain,&#xA;strDrawing,&#xA;strItemDescription,&#xA;strNetValueSo,&#xA;strNetPricePO,&#xA;strSDSTEXT,&#xA;strStatusSAP}]" DataTable="[dt_GenReport]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_GenReport]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="314,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;SUMMARY_REPORT_PATH&quot;).ToString+&quot;SUMMART_REPORT_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Add Data Row&quot;]" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strStatusBot,&#xA;strStatusData,&#xA;strDataAndTime,&#xA;strDateNow,&#xA;strCreatedBy,&#xA;strServiceOrderNumber,&#xA;strDeliveryNumber,&#xA;strPONumber,&#xA;strSoldToParty,&#xA;strSoldToName,&#xA;strShipToPartCode,&#xA;strShipToPartName,&#xA;strPain,&#xA;strDrawing,&#xA;strItemDescription,&#xA;strNetValueSo,&#xA;strNetPricePO,&#xA;strSDSTEXT,&#xA;strStatusSAP}]" DataTable="[dt_GenReport]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="509,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_GenReport]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="509,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;SUMMARY_REPORT_PATH&quot;).ToString+&quot;SUMMART_REPORT_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -354,10 +410,10 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:WriteRange>
                   </Sequence>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336,888" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="531,52" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -441,8 +497,8 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Data Flow Complate : &quot;+totalData.ToString]" />
-          <Assign sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="583,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Data Flow Complate : &quot;+totalData.ToString]" />
+          <Assign sap:VirtualizedContainerService.HintSize="583,60" sap2010:WorkflowViewState.IdRef="Assign_18">
             <Assign.To>
               <OutArgument x:TypeArguments="ui:GenericValue">[strRemark]</OutArgument>
             </Assign.To>
@@ -450,7 +506,7 @@
               <InArgument x:TypeArguments="ui:GenericValue">[""]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign sap:VirtualizedContainerService.HintSize="583,60" sap2010:WorkflowViewState.IdRef="Assign_14">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strBodyTemplate]</OutArgument>
             </Assign.To>
@@ -458,7 +514,7 @@
               <InArgument x:TypeArguments="x:String">[strBodyTemplate.Replace("Date",dateMail).Replace("total",in_ToltalData.ToString).Replace("Content",strEmail).Replace("detail",strRemark)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[strBodyTemplate]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+          <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[strBodyTemplate]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="583,147" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังคา ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                 <InArgument x:TypeArguments="x:String">[in_Config("SUMMARY_REPORT_PATH").ToString+"SUMMART_REPORT_"+now.AddDays(-1).ToString("dd.MM.yyyy")+".xlsx"]</InArgument>

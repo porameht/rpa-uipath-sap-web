@@ -138,7 +138,7 @@
                 </Sequence>
                 <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[checkOpenLogin]" sap:VirtualizedContainerService.HintSize="611,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7a3ab0910bdbf74026ea53cf0069310e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7a3ab0910bdbf74026ea53cf0069310e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" TimeoutMS="6000" WaitForReady="COMPLETE" />
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
                 <If Condition="[checkOpenLogin]" sap:VirtualizedContainerService.HintSize="611,1611" sap2010:WorkflowViewState.IdRef="If_4">
@@ -193,7 +193,7 @@
                           <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
                           <ui:UiElementExists DisplayName="Element Exists 'H1'" Exists="[checkLogin]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
                             <ui:UiElementExists.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3ef390294d2b05e60ba995fab8a78b9c" Selector="&lt;webctrl aaname='Add' parentid='form1' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3ef390294d2b05e60ba995fab8a78b9c" Selector="&lt;webctrl aaname='Add' parentid='form1' tag='A' /&gt;" TimeoutMS="6000" WaitForReady="COMPLETE" />
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
                           <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_4">
