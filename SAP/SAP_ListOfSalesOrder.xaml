@@ -3,11 +3,12 @@
     <x:Property Name="out_TransectionData" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="dt_BuildListOfSalesOrder" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="strDateNow" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1681,27197</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1681,27179</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,6 +61,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -68,7 +70,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="SAP_ListOfSalesOrder" sap:VirtualizedContainerService.HintSize="1641,27117" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="SAP_ListOfSalesOrder" sap:VirtualizedContainerService.HintSize="1641,27099" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ListOfSalesOrder" />
       <Variable x:TypeArguments="x:String" Name="strCustRef" />
@@ -124,15 +126,15 @@
         <InArgument x:TypeArguments="ui:GenericValue">[0]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1619,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting...... Sequence List Sales Orders&quot;]" />
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1619,1243" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1619,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting...... Sequence List Sales Orders&quot;]" />
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1619,1237" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="432,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; Data Scraping Sales Order List&quot;]" />
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="432,853" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="432,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; Data Scraping Sales Order List&quot;]" />
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="432,849" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
           <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'ListofSal Sap_front'" sap:VirtualizedContainerService.HintSize="414,376" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="430fa811a48e04d2559311bf3626e5f7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='List of Sales Orders*' /&gt;">
             <ui:WindowScope.Body>
@@ -200,13 +202,13 @@
     </ui:ExcelApplicationScope>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1619,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; Create Data Table&quot;]" />
     <ui:BuildDataTable DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1619,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Create_x0020_By&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_Document&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cust._x0020_Reference&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Material_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Item_x0020_Description&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Net_x0020_Value&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Usage&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SoldtoCode&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SoldtoName&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;สถานที่ก่อสร้าง&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;แปลง&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ชื่อแบบ&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;เขต&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;จังหวัด&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;WebStatus&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ServiceOrderNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ServiceDeliveryNumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;GetDataPONumber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;GetDataNetPrice&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Text_x0020_Header1&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TextHeader_x0020_3&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Result&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ResultBUC&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ShipToPartyCode&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TextHeader&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;StatusBot&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DataAndTime&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CreateOnSap&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_ListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1619,24780" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_ListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1619,24772" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1589,24631" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1589,24624" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="count" />
             </Sequence.Variables>
@@ -1260,7 +1262,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <If Condition="[string.IsNullOrEmpty(strYourRef) or strYourRef = &quot;&quot;]" DisplayName="If - Check PO Number" sap:VirtualizedContainerService.HintSize="1567,7482" sap2010:WorkflowViewState.IdRef="If_22">
+            <If Condition="[string.IsNullOrEmpty(strYourRef) or strYourRef = &quot;&quot;]" DisplayName="If - Check PO Number" sap:VirtualizedContainerService.HintSize="1567,7478" sap2010:WorkflowViewState.IdRef="If_22">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="336,317" sap2010:WorkflowViewState.IdRef="Sequence_62">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1280,7 +1282,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="725,7332" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                <Sequence sap:VirtualizedContainerService.HintSize="725,7330" sap2010:WorkflowViewState.IdRef="Sequence_71">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1706,26 +1708,26 @@
                       <InArgument x:TypeArguments="x:String">Data OK</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="703,93" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[strResult]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="703,91" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[strResult]" />
                 </Sequence>
               </If.Else>
             </If>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1567,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1567,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="233,904" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="233,900" sap2010:WorkflowViewState.IdRef="Sequence_49">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strCreatedBy.ToString,strSalesDocument.ToString,build_staCustRef.ToString,strMaterial.ToString,strDescription.ToString}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="211,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="ADD1" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="ADD1" />
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strNetValue.ToString,strUsage.ToString,strPartnerNumber.ToString,strPartnerName.ToString,strLocation.ToString,strLocationPanel.ToString}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="211,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="ADD2" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="ADD2" />
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strDrawingName.ToString,strCountryLine.ToString,strCountry.ToString,strWebAfterCompare.ToString,strServiceOrder.ToString}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="211,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="ADD3" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="ADD3" />
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strServiceDeliver.ToString,strGetDataPO.ToString,strGetDataNetPrice.ToString}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="211,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="ADD4" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="ADD4" />
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strTextHeaderNote1.ToString,strTextHeaderNote2.ToString,strResult.ToString,strResultBUC.ToString}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="211,22" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="211,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="ADD5" />
                 </Sequence>
@@ -1738,7 +1740,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
             <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strCreatedBy.ToString,strSalesDocument.ToString,build_staCustRef.ToString,strMaterial.ToString,strDescription.ToString,strNetValue.ToString,strUsage.ToString,strPartnerNumber.ToString,strPartnerName.ToString,strLocation.ToString,strLocationPanel.ToString,strDrawingName.ToString,strCountryLine.ToString,strCountry.ToString,strWebAfterCompare.ToString,strServiceOrder.ToString,strServiceDeliver.ToString,strGetDataPO.ToString,strGetDataNetPrice.ToString,strTextHeaderNote1.ToString,strTextHeaderNote2.ToString,strResult.ToString,strResultBUC.ToString,strShiptoPartyCode.ToString,&quot;&quot;,&quot;&quot;,&quot;&quot;,strCreateOn}]" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="1567,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1567,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_BuildListOfSalesOrder]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1567,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+strDateNow+&quot;.xlsx&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -1753,7 +1755,7 @@
                 <InArgument x:TypeArguments="ui:GenericValue">[processCount+1]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1567,93" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;&gt;&gt;&gt;&gt;&gt; Count of Data : &quot;+processCount+&quot;/&quot;+dt_ListOfSalesOrder.Rows.Count +&quot; &lt;&lt;&lt;&lt;&lt;&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1567,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;&gt;&gt;&gt;&gt;&gt; Count of Data : &quot;+processCount+&quot;/&quot;+dt_ListOfSalesOrder.Rows.Count +&quot; &lt;&lt;&lt;&lt;&lt;&quot;]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
@@ -1763,6 +1765,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1619,93" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;&gt;&gt;&gt; End Process...... List Sales Order&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1619,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;&gt;&gt;&gt; End Process...... List Sales Order&quot;]" />
   </Sequence>
 </Activity>

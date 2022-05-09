@@ -166,6 +166,7 @@
                                   <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TransectionData" />
                                   <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_BuildListOfSalesOrder">[out_dt_BuildListOfSalesOrder]</OutArgument>
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </TryCatch.Try>
@@ -231,7 +232,7 @@
                                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                         </ui:HttpClient.UrlSegments>
                                       </ui:HttpClient>
-                                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+errorMsgListSales]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังคา ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="apinyako@scg.com">
+                                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+errorMsgListSales]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังคา ประจำวันที่ &quot;+strDateNow]" To="apinyako@scg.com">
                                         <ui:SendMail.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                                         </ui:SendMail.Files>
@@ -251,7 +252,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[out_dt_BuildListOfSalesOrder]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]">
+                                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[out_dt_BuildListOfSalesOrder]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+strDateNow+&quot;.xlsx&quot;]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -301,7 +302,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Log exception message and End process" sap:VirtualizedContainerService.HintSize="336,315" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Log exception message and End process" sap:VirtualizedContainerService.HintSize="336,208" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -347,7 +348,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="211,142" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="444,1147" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="418,691" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
@@ -383,6 +384,7 @@
                           <OutArgument x:TypeArguments="sd:DataTable" x:Key="dataAfterProcess">[dataAfterProcess]</OutArgument>
                           <InOutArgument x:TypeArguments="x:String" x:Key="MessageError">[Message_Error]</InOutArgument>
                           <OutArgument x:TypeArguments="x:Int32" x:Key="totalData">[totalData]</OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -489,9 +491,9 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="530,2119" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read Config, Init Applications" DisplayName="Init" sap:VirtualizedContainerService.HintSize="530,2350" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Catch intialization exceptions" sap:VirtualizedContainerService.HintSize="504,1705" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Catch intialization exceptions" sap:VirtualizedContainerService.HintSize="504,1936" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,7 +501,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Init State" sap:VirtualizedContainerService.HintSize="486,1478" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Init State" sap:VirtualizedContainerService.HintSize="486,1709" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -590,11 +592,21 @@
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
+                              <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[strDateNow]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[now.AddDays(-1).ToString("dd.MM.yyyy")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Setting Day : &quot;+strDateNow]" />
                               <If Condition="[Message_Error isNot Nothing]" DisplayName="If - Check Error" sap:VirtualizedContainerService.HintSize="464,235" sap2010:WorkflowViewState.IdRef="If_11">
                                 <If.Else>
                                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SAP_CreateSalesOrder workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="SAP\SAP_CreateSalesOrder.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </If.Else>
@@ -697,6 +709,7 @@
                                                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                                 <InArgument x:TypeArguments="x:Int32" x:Key="in_ToltalData">[totalData]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_DataError">[dataError]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
                                             </ui:InvokeWorkflowFile>
                                           </If.Else>
@@ -818,10 +831,10 @@
                           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                         </ui:HttpClient.UrlSegments>
                       </ui:HttpClient>
-                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+Message_Error]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
+                      <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[&quot;ระบบได้จัดทำแล้วแต่เกิดข้อผิดพลาด โดยมีรายละเอียดดังนี้ &quot;+Message_Error]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังค่า ประจำวันที่ &quot;+strDateNow]" To="apinyako@scg.com">
                         <ui:SendMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                            <InArgument x:TypeArguments="x:String">[Config("SUMMARY_REPORT_PATH").ToString+"SUMMART_REPORT_"+now.AddDays(-1).ToString("dd.MM.yyyy")+".xlsx"]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[Config("SUMMARY_REPORT_PATH").ToString+"SUMMART_REPORT_"+strDateNow+".xlsx"]</InArgument>
                           </scg:List>
                         </ui:SendMail.Files>
                       </ui:SendMail>
@@ -914,6 +927,7 @@
       <Variable x:TypeArguments="x:Int32" Name="totalData" />
       <Variable x:TypeArguments="x:String" Name="errorMsgListSales" />
       <Variable x:TypeArguments="x:String" Name="dataError" />
+      <Variable x:TypeArguments="x:String" Name="strDateNow" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

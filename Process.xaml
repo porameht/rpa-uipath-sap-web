@@ -9,6 +9,7 @@
     <x:Property Name="dataAfterProcess" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="MessageError" Type="InOutArgument(x:String)" />
     <x:Property Name="totalData" Type="OutArgument(x:Int32)" />
+    <x:Property Name="strDateNow" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -65,6 +66,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="358,1755" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -100,6 +102,7 @@
           <InOutArgument x:TypeArguments="x:String" x:Key="MeesageError">[MessageError]</InOutArgument>
           <OutArgument x:TypeArguments="x:Int32" x:Key="countDataNG">[countDataNG]</OutArgument>
           <OutArgument x:TypeArguments="x:Int32" x:Key="totalData">[totalData]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -115,8 +118,8 @@
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;***** Fill Data Successfully : &quot;+countSuccess.ToString +&quot; PO *****&quot;]" />
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;***** Fill Data Fail : &quot;+countFail.ToString+&quot; PO *****&quot;]" />
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process : &quot;+process]" />
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dataAfterProcess]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Read Excel File : DATA_SAP_&quot;+now.AddDays(-1).ToString(&quot;dd.MM.yyyy&quot;)+&quot;.xlsx&quot;]" />
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dataAfterProcess]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+strDateNow+&quot;.xlsx&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Read Excel File : DATA_SAP_&quot;+strDateNow+&quot;.xlsx&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>
