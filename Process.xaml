@@ -102,7 +102,7 @@
           <InOutArgument x:TypeArguments="x:String" x:Key="MeesageError">[MessageError]</InOutArgument>
           <OutArgument x:TypeArguments="x:Int32" x:Key="countDataNG">[countDataNG]</OutArgument>
           <OutArgument x:TypeArguments="x:Int32" x:Key="totalData">[totalData]</OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="strDateNow">[strDateNow]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strDateNow">[strDateNow]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_1">
