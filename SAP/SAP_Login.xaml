@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1120,4805</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1120,5245</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,7 +59,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,4725" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1080,5165" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SAP_Password_String" />
       <Variable x:TypeArguments="ss:SecureString" Name="SAP_Password" />
@@ -78,9 +78,10 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Kill SAP (SAP_Login)&quot;]" />
     <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill SAP" sap:VirtualizedContainerService.HintSize="1058,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1058,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Open SAP...&quot; + Date.Now.ToString(&quot;HHmmss&quot;)]" />
-    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3290" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="SAP_Login" sap:VirtualizedContainerService.HintSize="1058,3730" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="i" />
+        <Variable x:TypeArguments="x:Boolean" Name="checkPopup" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -327,6 +328,30 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:WindowScope>
+      <ui:UiElementExists DisplayName="Element Exists 'GuiModalWindow  wnd[1]'" Exists="[checkPopup]" sap:VirtualizedContainerService.HintSize="500,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+        <ui:UiElementExists.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d95577aba48b2a8702f468b06cdfc926" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='System Messages' /&gt;" TimeoutMS="4000" WaitForReady="INTERACTIVE" />
+        </ui:UiElementExists.Target>
+      </ui:UiElementExists>
+      <If Condition="[checkPopup]" sap:VirtualizedContainerService.HintSize="500,254" sap2010:WorkflowViewState.IdRef="If_3">
+        <If.Then>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'GuiButton  btn[12]'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2e4956706c849a796b5e24c0854eea25" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='System Messages' /&gt;&lt;sap id='tbar[0]/btn[12]' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+        </If.Then>
+      </If>
     </Sequence>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SAP_CheckLoginStatus workflow" sap:VirtualizedContainerService.HintSize="1058,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SAP\SAP_CheckLoginStatus.xaml">
       <ui:InvokeWorkflowFile.Arguments>
