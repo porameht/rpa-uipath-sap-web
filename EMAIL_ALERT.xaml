@@ -512,7 +512,7 @@
               <OutArgument x:TypeArguments="x:String">[strBodyTemplate]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[strBodyTemplate.Replace("Date",dateMail).Replace("total",in_ToltalData.ToString).Replace("Content",strEmail).Replace("detail",strRemark)]</InArgument>
+              <InArgument x:TypeArguments="x:String">[strBodyTemplate.Replace("Date",strDateNow).Replace("total",in_ToltalData.ToString).Replace("Content",strEmail).Replace("detail",strRemark)]</InArgument>
             </Assign.Value>
           </Assign>
           <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="porameht.kh@inetms.co.th;witsarut.pr@inetms.co.th" Body="[strBodyTemplate]" DisplayName="Send SMTP Mail Message" Email="[Username]" EnableSSL="True" From="[Username]" sap:VirtualizedContainerService.HintSize="583,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Password="[(new system.Net.NetworkCredential(string.Empty, Password).password).ToString]" Port="587" SecureConnection="Auto" Server="outlook.office365.com" Subject="[&quot;[SCGBOT] : Process SCGCBM SDS_Direct ค่าแรงมุงหลังคา ประจำวันที่ &quot;+strDateNow]" To="sipakaj@scg.com, patchakl@scg.com, pattanri@scg.com, piyanucl@scg.com, ploens@scg.com, acharaal@scg.com, saowansr@scg.com, apinyako@scg.com">
