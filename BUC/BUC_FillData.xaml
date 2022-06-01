@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1860,17678</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1860,17716</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -73,7 +73,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="BUC_FillData" sap:VirtualizedContainerService.HintSize="1820,17598" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="BUC_FillData" sap:VirtualizedContainerService.HintSize="1820,17636" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="processCount" />
       <Variable x:TypeArguments="x:Int32" Name="i" />
@@ -116,6 +116,7 @@
       <Variable x:TypeArguments="x:String" Name="strStatusSAP" />
       <Variable x:TypeArguments="x:Int32" Name="countData" />
       <Variable x:TypeArguments="x:String" Name="checkDataReport" />
+      <Variable x:TypeArguments="x:String" Name="getCreateby" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,7 +139,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting ...... BUC Fill Data&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting ...... BUC Fill Data&quot;]" />
     <ui:FilterDataTable DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="Filter Data Table - Data OK" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1798,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[build_in_dt_BuildListOfSalesOrder]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
@@ -174,7 +175,7 @@
         <InArgument x:TypeArguments="x:Int32">[in_dt_BuildListOfSalesOrder.Rows.Count]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; On Add Data Page&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; On Add Data Page&quot;]" />
     <Assign sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
@@ -183,7 +184,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <TryCatch DisplayName="Try Catch - Click +ADD to Form data" sap:VirtualizedContainerService.HintSize="1798,2297" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - Click +ADD to Form data" sap:VirtualizedContainerService.HintSize="1798,2309" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -191,7 +192,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="631,1603" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence sap:VirtualizedContainerService.HintSize="631,1611" sap2010:WorkflowViewState.IdRef="Sequence_23">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -212,12 +213,12 @@
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3ef390294d2b05e60ba995fab8a78b9c" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl aaname='Add' parentid='form1' tag='A' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
             </ui:Click.Target>
           </ui:Click>
-          <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="609,1333" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+          <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="609,1341" sap2010:WorkflowViewState.IdRef="DoWhile_1">
             <DoWhile.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="checkAdd" />
             </DoWhile.Variables>
             <DoWhile.Condition>[checkAdd = false and i &lt;= 10]</DoWhile.Condition>
-            <Sequence sap:VirtualizedContainerService.HintSize="583,1171" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <Sequence sap:VirtualizedContainerService.HintSize="583,1177" sap2010:WorkflowViewState.IdRef="Sequence_22">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -237,9 +238,9 @@
                   <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[i = 6]" sap:VirtualizedContainerService.HintSize="561,608" sap2010:WorkflowViewState.IdRef="If_23">
+              <If Condition="[i = 6]" sap:VirtualizedContainerService.HintSize="561,612" sap2010:WorkflowViewState.IdRef="If_23">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="436,460" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                  <Sequence sap:VirtualizedContainerService.HintSize="436,462" sap2010:WorkflowViewState.IdRef="Sequence_114">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ui:GenericValue" Name="url" />
                     </Sequence.Variables>
@@ -258,11 +259,11 @@
                         </ActivityAction>
                       </ui:BrowserScope.Body>
                     </ui:BrowserScope>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="414,91" sap2010:WorkflowViewState.IdRef="LogMessage_84" Level="Info" Message="[&quot;Re page&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="414,93" sap2010:WorkflowViewState.IdRef="LogMessage_84" Level="Info" Message="[&quot;Re page&quot;]" />
                   </Sequence>
                 </If.Then>
               </If>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="561,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;&gt;&gt;&gt; Login Count Check Add :&quot; +i.ToString]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="561,93" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;&gt;&gt;&gt; Login Count Check Add :&quot; +i.ToString]" />
             </Sequence>
           </DoWhile>
         </Sequence>
@@ -300,31 +301,31 @@
       </TryCatch.Catches>
     </TryCatch>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;&gt;&gt;&gt; Data Rows Q'Ty : &quot;+countData.ToString]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1798,12445" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" Visible="False" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+in_strDateNow+&quot;.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1843,12542" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" Visible="False" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+in_strDateNow+&quot;.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1784,12336" sap2010:WorkflowViewState.IdRef="Sequence_69">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1829,12433" sap2010:WorkflowViewState.IdRef="Sequence_69">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow CurrentIndex="[Idx]" DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1762,12212" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow CurrentIndex="[Idx]" DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1807,12309" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="1732,12065" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                  <Sequence sap:VirtualizedContainerService.HintSize="1777,12161" sap2010:WorkflowViewState.IdRef="Sequence_109">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="1710,60" sap2010:WorkflowViewState.IdRef="Assign_79">
+                    <Assign sap:VirtualizedContainerService.HintSize="1755,60" sap2010:WorkflowViewState.IdRef="Assign_79">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[textHeader1]</OutArgument>
                       </Assign.To>
@@ -334,7 +335,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="1710,60" sap2010:WorkflowViewState.IdRef="Assign_80">
+                    <Assign sap:VirtualizedContainerService.HintSize="1755,60" sap2010:WorkflowViewState.IdRef="Assign_80">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[textHeader2]</OutArgument>
                       </Assign.To>
@@ -344,31 +345,31 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[row(&quot;Result&quot;).ToString.Contains(&quot;Data OK&quot;)]" sap:VirtualizedContainerService.HintSize="1710,11741" sap2010:WorkflowViewState.IdRef="If_21">
+                    <If Condition="[row(&quot;Result&quot;).ToString.Contains(&quot;Data OK&quot;)]" sap:VirtualizedContainerService.HintSize="1755,11837" sap2010:WorkflowViewState.IdRef="If_21">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="1443,11594" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                        <Sequence sap:VirtualizedContainerService.HintSize="1488,11688" sap2010:WorkflowViewState.IdRef="Sequence_112">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1421,91" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="Info" Message="[&quot;&gt;&gt;&gt; Result = Data OK&quot;]" />
-                          <Sequence sap:VirtualizedContainerService.HintSize="1421,11339" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1466,93" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="Info" Message="[&quot;&gt;&gt;&gt; Result = Data OK&quot;]" />
+                          <Sequence sap:VirtualizedContainerService.HintSize="1466,11431" sap2010:WorkflowViewState.IdRef="Sequence_108">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[row(&quot;ResultBUC&quot;).ToString.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="1399,11215" sap2010:WorkflowViewState.IdRef="If_20">
+                            <If Condition="[row(&quot;ResultBUC&quot;).ToString.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="1444,11307" sap2010:WorkflowViewState.IdRef="If_20">
                               <If.Else>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1274,11068" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1319,11158" sap2010:WorkflowViewState.IdRef="Sequence_107">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_82" Level="Info" Message="[&quot;&gt;&gt;&gt; Result = PO RS Uplaod&quot;]" />
-                                  <If Condition="[countData &lt; build_in_dt_BuildListOfSalesOrder.Rows.Count]" sap:VirtualizedContainerService.HintSize="1252,362" sap2010:WorkflowViewState.IdRef="If_12">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,93" sap2010:WorkflowViewState.IdRef="LogMessage_82" Level="Info" Message="[&quot;&gt;&gt;&gt; Result = PO RS Uplaod&quot;]" />
+                                  <If Condition="[countData &lt; build_in_dt_BuildListOfSalesOrder.Rows.Count]" sap:VirtualizedContainerService.HintSize="1252,367" sap2010:WorkflowViewState.IdRef="If_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -388,13 +389,13 @@
                                       </ui:BrowserScope>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="336,215" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="336,217" sap2010:WorkflowViewState.IdRef="Sequence_87">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;&gt;&gt;&gt; First Transection &quot;]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;&gt;&gt;&gt; First Transection &quot;]" />
                                       </Sequence>
                                     </If.Else>
                                   </If>
@@ -1056,7 +1057,7 @@
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;&gt;&gt;&gt; User SAP : &quot;+row(&quot;Create By&quot;).ToString]" />
-                                  <Sequence DisplayName="Sequence - Attach File" sap:VirtualizedContainerService.HintSize="336,762" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                  <Sequence DisplayName="Sequence - Attach File" sap:VirtualizedContainerService.HintSize="1297,52" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ui:GenericValue" Name="strDateTime" />
                                     </Sequence.Variables>
@@ -1097,7 +1098,7 @@
                                     </Assign>
                                     <ui:ExcelWriteCell Cell="[&quot;AA&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[strDateTime]" />
                                   </Sequence>
-                                  <Assign sap:VirtualizedContainerService.HintSize="1252,60" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                  <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_45">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Int32">[countData]</OutArgument>
                                     </Assign.To>
@@ -1105,8 +1106,8 @@
                                       <InArgument x:TypeArguments="x:Int32">[countData-1]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;&gt;&gt;&gt;&gt;&gt; Data Fill To Form : &quot;+build_in_dt_BuildListOfSalesOrder.Rows.Count.ToString+&quot;/&quot;+countData.ToString+&quot; &lt;&lt;&lt;&lt;&lt;&quot;]" />
-                                  <Assign sap:VirtualizedContainerService.HintSize="1252,60" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1297,93" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;&gt;&gt;&gt;&gt;&gt; Data Fill To Form : &quot;+build_in_dt_BuildListOfSalesOrder.Rows.Count.ToString+&quot;/&quot;+countData.ToString+&quot; &lt;&lt;&lt;&lt;&lt;&quot;]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_46">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Int32">[a]</OutArgument>
                                     </Assign.To>
@@ -1114,15 +1115,15 @@
                                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1252,51" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1297,52" sap2010:WorkflowViewState.IdRef="CommentOut_17">
                                     <ui:CommentOut.Body>
-                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,615" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,617" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,491" sap2010:WorkflowViewState.IdRef="DoWhile_5" Condition="[checkSubmit = true and a &lt;= 3]">
+                                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,493" sap2010:WorkflowViewState.IdRef="DoWhile_5" Condition="[checkSubmit = true and a &lt;= 3]">
                                           <Sequence sap:VirtualizedContainerService.HintSize="336,330" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1153,7 +1154,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:CommentOut>
-                                  <ui:Click ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="1252,106" sap2010:WorkflowViewState.IdRef="Click_67" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                  <ui:Click ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="1297,106" sap2010:WorkflowViewState.IdRef="Click_67" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                     <ui:Click.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -1168,28 +1169,28 @@
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="51c7e6ab32e6a2e10e9bab816709b149" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='content_btnSave' tag='BUTTON' /&gt;" WaitForReady="COMPLETE" />
                                     </ui:Click.Target>
                                   </ui:Click>
-                                  <Delay DisplayName="Delay - 3S" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1252,22" sap2010:WorkflowViewState.IdRef="Delay_12" />
-                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="1252,116" sap2010:WorkflowViewState.IdRef="SendHotkey_113" Key="esc" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                  <Delay DisplayName="Delay - 3S" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1297,22" sap2010:WorkflowViewState.IdRef="Delay_12" />
+                                  <ui:SendHotkey DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="1297,117" sap2010:WorkflowViewState.IdRef="SendHotkey_113" Key="esc" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                                     <ui:SendHotkey.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="COMPLETE" />
                                     </ui:SendHotkey.Target>
                                   </ui:SendHotkey>
-                                  <Delay DisplayName="Delay - 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1252,22" sap2010:WorkflowViewState.IdRef="Delay_13" />
-                                  <ui:UiElementExists DisplayName="Element Exists Check_PO" Exists="[Check_PO]" sap:VirtualizedContainerService.HintSize="1252,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                                  <Delay DisplayName="Delay - 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1297,22" sap2010:WorkflowViewState.IdRef="Delay_13" />
+                                  <ui:UiElementExists DisplayName="Element Exists Check_PO" Exists="[Check_PO]" sap:VirtualizedContainerService.HintSize="1297,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                                     <ui:UiElementExists.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="70d46c90231ee9158a324767dbc1ad38" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl tag='H1' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
                                     </ui:UiElementExists.Target>
                                   </ui:UiElementExists>
-                                  <If Condition="[Check_PO]" DisplayName="If - Check_PO" sap:VirtualizedContainerService.HintSize="1252,2172" sap2010:WorkflowViewState.IdRef="If_19">
+                                  <If Condition="[Check_PO]" DisplayName="If - Check_PO" sap:VirtualizedContainerService.HintSize="1297,2961" sap2010:WorkflowViewState.IdRef="If_19">
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="486,1809" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="531,2597" sap2010:WorkflowViewState.IdRef="Sequence_102">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="Delay_14" />
-                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Status BUC" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="GetValue_10">
+                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="509,22" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Status BUC" sap:VirtualizedContainerService.HintSize="509,106" sap2010:WorkflowViewState.IdRef="GetValue_10">
                                           <ui:GetValue.Target>
                                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b1a2d71b4d0a5c386b0c4a6061fcb821" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='normal-table_wrapper' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' colName='สถานะข้อมูล' idx='1' /&gt;" WaitForReady="COMPLETE" />
                                           </ui:GetValue.Target>
@@ -1197,8 +1198,42 @@
                                             <OutArgument x:TypeArguments="x:String">[getTextStatusBUC]</OutArgument>
                                           </ui:GetValue.Value>
                                         </ui:GetValue>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_73" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextStatusBUC : &quot;+getTextStatusBUC]" />
-                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - PO" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="GetValue_11">
+                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="509,22" sap2010:WorkflowViewState.IdRef="Delay_17" />
+                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Create By" sap:VirtualizedContainerService.HintSize="509,106" sap2010:WorkflowViewState.IdRef="GetValue_15">
+                                          <ui:GetValue.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a62e8b6c1f3342b6ae1a37b7b56b3559" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='normal-table_wrapper' tag='TABLE' /&gt;&lt;webctrl idx='1' isleaf='1' colName='Cerate By' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                          </ui:GetValue.Target>
+                                          <ui:GetValue.Value>
+                                            <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                          </ui:GetValue.Value>
+                                        </ui:GetValue>
+                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="509,22" sap2010:WorkflowViewState.IdRef="Delay_18" />
+                                        <If Condition="[getCreateby.Contains(&quot;BOTBUC2 RPA BUC&quot;)]" sap:VirtualizedContainerService.HintSize="509,209" sap2010:WorkflowViewState.IdRef="If_24">
+                                          <If.Then>
+                                            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_83">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">BOT RPA</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_84">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">["User : "+strCreatedBy]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </If.Else>
+                                        </If>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_85" Level="Info" Message="[&quot;&gt;&gt;&gt; getCreateBy : &quot;+getCreateby]" />
+                                        <ui:ExcelWriteCell Cell="[&quot;AC&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="509,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="Sheet1" Text="[getCreateby]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_73" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextStatusBUC : &quot;+getTextStatusBUC]" />
+                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - PO" sap:VirtualizedContainerService.HintSize="509,106" sap2010:WorkflowViewState.IdRef="GetValue_11">
                                           <ui:GetValue.Target>
                                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="37dd9fe9c99c0dc238acd6e8aed8f61e" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='normal-table_wrapper' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' colName='เลขที่ PO' idx='1' /&gt;" WaitForReady="COMPLETE" />
                                           </ui:GetValue.Target>
@@ -1206,8 +1241,8 @@
                                             <OutArgument x:TypeArguments="x:String">[getTextPO]</OutArgument>
                                           </ui:GetValue.Value>
                                         </ui:GetValue>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextPO : &quot;+getTextPO]" />
-                                        <If Condition="[getTextPO = strPONumber]" sap:VirtualizedContainerService.HintSize="464,458" sap2010:WorkflowViewState.IdRef="If_17">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextPO : &quot;+getTextPO]" />
+                                        <If Condition="[getTextPO = strPONumber]" sap:VirtualizedContainerService.HintSize="509,460" sap2010:WorkflowViewState.IdRef="If_17">
                                           <If.Then>
                                             <Sequence sap:VirtualizedContainerService.HintSize="336,311" sap2010:WorkflowViewState.IdRef="Sequence_115">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -1227,8 +1262,8 @@
                                             </Sequence>
                                           </If.Then>
                                         </If>
-                                        <Delay DisplayName="Delay - 3S" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="464,51" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+                                        <Delay DisplayName="Delay - 3S" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="509,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="509,52" sap2010:WorkflowViewState.IdRef="CommentOut_18">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_101">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -1260,8 +1295,8 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Fill Data Successfully | then&quot;]" />
-                                        <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_69">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="509,93" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="Info" Message="[&quot;Fill Data Successfully | then&quot;]" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_69">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[strStatusBot]</OutArgument>
                                           </Assign.To>
@@ -1269,7 +1304,7 @@
                                             <InArgument x:TypeArguments="x:String">Complete</InArgument>
                                           </Assign.Value>
                                         </Assign>
-                                        <ui:ExcelWriteCell Cell="[&quot;Z&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="464,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[strStatusBot]" />
+                                        <ui:ExcelWriteCell Cell="[&quot;Z&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="509,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[strStatusBot]" />
                                         <Assign DisplayName="Assign - Status Data" sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_73">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[strStatusData]</OutArgument>
@@ -1281,7 +1316,7 @@
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="741,2025" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="741,2812" sap2010:WorkflowViewState.IdRef="Sequence_106">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1306,7 +1341,41 @@
                                             <OutArgument x:TypeArguments="x:String">[getTextStatusBUC]</OutArgument>
                                           </ui:GetValue.Value>
                                         </ui:GetValue>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="719,91" sap2010:WorkflowViewState.IdRef="LogMessage_76" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextStatusBUC : &quot;+getTextStatusBUC]" />
+                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="719,22" sap2010:WorkflowViewState.IdRef="Delay_19" />
+                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Create By" sap:VirtualizedContainerService.HintSize="719,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                                          <ui:GetValue.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a62e8b6c1f3342b6ae1a37b7b56b3559" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='normal-table_wrapper' tag='TABLE' /&gt;&lt;webctrl idx='1' isleaf='1' colName='Cerate By' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                                          </ui:GetValue.Target>
+                                          <ui:GetValue.Value>
+                                            <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                          </ui:GetValue.Value>
+                                        </ui:GetValue>
+                                        <Delay DisplayName="Delay 1S" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="719,22" sap2010:WorkflowViewState.IdRef="Delay_20" />
+                                        <If Condition="[getCreateby.Contains(&quot;BOTBUC2 RPA BUC&quot;)]" sap:VirtualizedContainerService.HintSize="719,209" sap2010:WorkflowViewState.IdRef="If_25">
+                                          <If.Then>
+                                            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_85">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">BOT RPA</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_86">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[getCreateby]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">["User : "+strCreatedBy]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </If.Else>
+                                        </If>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="719,93" sap2010:WorkflowViewState.IdRef="LogMessage_86" Level="Info" Message="[&quot;&gt;&gt;&gt; getCreateBy : &quot;+getCreateby]" />
+                                        <ui:ExcelWriteCell Cell="[&quot;AC&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="719,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="Sheet1" Text="[getCreateby]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="719,93" sap2010:WorkflowViewState.IdRef="LogMessage_76" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextStatusBUC : &quot;+getTextStatusBUC]" />
                                         <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - PO" sap:VirtualizedContainerService.HintSize="719,106" sap2010:WorkflowViewState.IdRef="GetValue_13">
                                           <ui:GetValue.Target>
                                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="37dd9fe9c99c0dc238acd6e8aed8f61e" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl parentid='normal-table_wrapper' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' colName='เลขที่ PO' idx='1' /&gt;" WaitForReady="COMPLETE" />
@@ -1315,23 +1384,23 @@
                                             <OutArgument x:TypeArguments="x:String">[getTextPO]</OutArgument>
                                           </ui:GetValue.Value>
                                         </ui:GetValue>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="719,91" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextPO : &quot;+getTextPO]" />
-                                        <If Condition="[getTextPO = strPONumber]" sap:VirtualizedContainerService.HintSize="719,1040" sap2010:WorkflowViewState.IdRef="If_18">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="719,93" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="Info" Message="[&quot;&gt;&gt;&gt; getTextPO : &quot;+getTextPO]" />
+                                        <If Condition="[getTextPO = strPONumber]" sap:VirtualizedContainerService.HintSize="719,1044" sap2010:WorkflowViewState.IdRef="If_18">
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="358,893" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="358,895" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="336,442" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="336,444" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:ExcelWriteCell Cell="[&quot;W&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[getTextStatusBUC]" />
-                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_78" Level="Info" Message="[&quot;Fill Data Successfully | else&quot;]" />
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_78" Level="Info" Message="[&quot;Fill Data Successfully | else&quot;]" />
                                                 <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_81">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:Int32">[countSuccess]</OutArgument>
@@ -1361,14 +1430,14 @@
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="336,860" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="336,863" sap2010:WorkflowViewState.IdRef="Sequence_105">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="314,51" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="314,52" sap2010:WorkflowViewState.IdRef="CommentOut_19">
                                                 <ui:CommentOut.Body>
                                                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -1409,7 +1478,7 @@
                                                   <InArgument x:TypeArguments="x:Int32">[countFail+1]</InArgument>
                                                 </Assign.Value>
                                               </Assign>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_79" Level="Info" Message="[&quot;Fill Data Fail Have data Already&quot;]" />
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_79" Level="Info" Message="[&quot;Fill Data Fail Have data Already&quot;]" />
                                               <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_71">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:String">[strStatusBot]</OutArgument>
@@ -1497,12 +1566,12 @@
         <OutArgument x:TypeArguments="x:String">[checkDataReport]</OutArgument>
       </ui:GetValue.Value>
     </ui:GetValue>
-    <If Condition="[checkDataReport.Contains(&quot;No data available in table&quot;)]" sap:VirtualizedContainerService.HintSize="1798,992" sap2010:WorkflowViewState.IdRef="If_22">
+    <If Condition="[checkDataReport.Contains(&quot;No data available in table&quot;)]" sap:VirtualizedContainerService.HintSize="1798,996" sap2010:WorkflowViewState.IdRef="If_22">
       <If.Then>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;&gt;&gt;&gt; Not Found Data For Import&quot;]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;&gt;&gt;&gt; Not Found Data For Import&quot;]" />
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="486,844" sap2010:WorkflowViewState.IdRef="Sequence_113">
+        <Sequence sap:VirtualizedContainerService.HintSize="486,846" sap2010:WorkflowViewState.IdRef="Sequence_113">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1533,7 +1602,7 @@
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="026c384fb5b86062e2d7e678099f1d0f" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Confirm Save As' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <If Condition="[checkUpload]" sap:VirtualizedContainerService.HintSize="464,254" sap2010:WorkflowViewState.IdRef="If_6">
+          <If Condition="[checkUpload]" sap:VirtualizedContainerService.HintSize="464,256" sap2010:WorkflowViewState.IdRef="If_6">
             <If.Then>
               <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                 <ui:Click.CursorPosition>
@@ -1555,6 +1624,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; End...... BUC Fill Data&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; End...... BUC Fill Data&quot;]" />
   </Sequence>
 </Activity>
