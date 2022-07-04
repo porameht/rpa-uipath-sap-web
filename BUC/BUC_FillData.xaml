@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1860,17716</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1905,19508</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -73,7 +73,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="BUC_FillData" sap:VirtualizedContainerService.HintSize="1820,17636" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="BUC_FillData" sap:VirtualizedContainerService.HintSize="1865,19428" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="processCount" />
       <Variable x:TypeArguments="x:Int32" Name="i" />
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+    <Assign sap:VirtualizedContainerService.HintSize="1843,60" sap2010:WorkflowViewState.IdRef="Assign_18">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[countSuccess]</OutArgument>
       </Assign.To>
@@ -131,7 +131,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+    <Assign sap:VirtualizedContainerService.HintSize="1843,60" sap2010:WorkflowViewState.IdRef="Assign_19">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[countFail]</OutArgument>
       </Assign.To>
@@ -139,7 +139,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting ...... BUC Fill Data&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1843,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;&gt; Starting ...... BUC Fill Data&quot;]" />
     <ui:FilterDataTable DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="Filter Data Table - Data OK" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1798,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[build_in_dt_BuildListOfSalesOrder]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
@@ -159,7 +159,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <Assign DisplayName="Assign - Count Data Row" sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+    <Assign DisplayName="Assign - Count Data Row" sap:VirtualizedContainerService.HintSize="1843,60" sap2010:WorkflowViewState.IdRef="Assign_31">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[countData]</OutArgument>
       </Assign.To>
@@ -167,7 +167,7 @@
         <InArgument x:TypeArguments="x:Int32">[build_in_dt_BuildListOfSalesOrder.Rows.Count]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_77">
+    <Assign sap:VirtualizedContainerService.HintSize="1843,60" sap2010:WorkflowViewState.IdRef="Assign_77">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[totalData]</OutArgument>
       </Assign.To>
@@ -175,8 +175,8 @@
         <InArgument x:TypeArguments="x:Int32">[in_dt_BuildListOfSalesOrder.Rows.Count]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; On Add Data Page&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="1798,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1843,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;&gt;&gt;&gt; On Add Data Page&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="1843,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
       </Assign.To>
@@ -301,25 +301,25 @@
       </TryCatch.Catches>
     </TryCatch>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;&gt;&gt;&gt; Data Rows Q'Ty : &quot;+countData.ToString]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1843,12542" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" Visible="False" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+in_strDateNow+&quot;.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1843,14253" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" Visible="False" WorkbookPath="[in_Config(&quot;Path_DataSAP&quot;).ToString+&quot;\DATA_SAP_&quot;+in_strDateNow+&quot;.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1829,12433" sap2010:WorkflowViewState.IdRef="Sequence_69">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1829,14144" sap2010:WorkflowViewState.IdRef="Sequence_69">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow CurrentIndex="[Idx]" DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1807,12309" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow CurrentIndex="[Idx]" DataTable="[in_dt_BuildListOfSalesOrder]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1807,14020" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="1777,12161" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                  <Sequence sap:VirtualizedContainerService.HintSize="1777,13872" sap2010:WorkflowViewState.IdRef="Sequence_109">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -345,24 +345,28 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[row(&quot;Result&quot;).ToString.Contains(&quot;Data OK&quot;)]" sap:VirtualizedContainerService.HintSize="1755,11837" sap2010:WorkflowViewState.IdRef="If_21">
+                    <If Condition="[row(&quot;Result&quot;).ToString.Contains(&quot;Data OK&quot;)]" sap:VirtualizedContainerService.HintSize="1755,13548" sap2010:WorkflowViewState.IdRef="If_21">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="1488,11688" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                        <Sequence sap:VirtualizedContainerService.HintSize="1488,13399" sap2010:WorkflowViewState.IdRef="Sequence_112">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1466,93" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="Info" Message="[&quot;&gt;&gt;&gt; Result = Data OK&quot;]" />
-                          <Sequence sap:VirtualizedContainerService.HintSize="1466,11431" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                          <Sequence sap:VirtualizedContainerService.HintSize="1466,13142" sap2010:WorkflowViewState.IdRef="Sequence_108">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[row(&quot;ResultBUC&quot;).ToString.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="1444,11307" sap2010:WorkflowViewState.IdRef="If_20">
+                            <If Condition="[row(&quot;ResultBUC&quot;).ToString.Contains(&quot;PO RS Upload&quot;)]" sap:VirtualizedContainerService.HintSize="1444,13018" sap2010:WorkflowViewState.IdRef="If_20">
                               <If.Else>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1319,11158" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1319,12869" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Boolean" Name="ck_AttachFile" />
+                                    <Variable x:TypeArguments="ui:GenericValue" Name="l" />
+                                  </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -566,7 +570,7 @@
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_54" Level="Info" Message="[&quot;&gt;&gt;&gt; Province Name : &quot;+row(&quot;จังหวัด&quot;).ToString]" />
-                                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  select2-content_d...'" sap:VirtualizedContainerService.HintSize="1252,106" sap2010:WorkflowViewState.IdRef="Click_60" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  select2-content_d...'" sap:VirtualizedContainerService.HintSize="1297,106" sap2010:WorkflowViewState.IdRef="Click_60" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                                     <ui:Click.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -581,12 +585,12 @@
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="74553871c4e3b7620587e4bcc8cb0be0" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl id='select2-content_ddlAmphur-container' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
                                     </ui:Click.Target>
                                   </ui:Click>
-                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into - Country" EmptyField="False" sap:VirtualizedContainerService.HintSize="1252,134" sap2010:WorkflowViewState.IdRef="TypeInto_42" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;เขต&quot;).ToString+ &quot;[k(enter)]&quot;]">
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into - Country" EmptyField="False" sap:VirtualizedContainerService.HintSize="1297,134" sap2010:WorkflowViewState.IdRef="TypeInto_42" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;เขต&quot;).ToString+ &quot;[k(enter)]&quot;]">
                                     <ui:TypeInto.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="671009ab288ad76f9a109bd03686cf30" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl tag='INPUT' type='search' /&gt;" WaitForReady="INTERACTIVE" />
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;&gt;&gt;&gt; Country Name : &quot;+row(&quot;เขต&quot;).ToString]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1297,93" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;&gt;&gt;&gt; Country Name : &quot;+row(&quot;เขต&quot;).ToString]" />
                                   <Assign sap:VirtualizedContainerService.HintSize="1252,60" sap2010:WorkflowViewState.IdRef="Assign_36">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[textHeader1]</OutArgument>
@@ -846,7 +850,7 @@
                                     </If.Else>
                                   </If>
                                   <ui:ExcelWriteCell Cell="[&quot;Y&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1252,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Sheet1" Text="[strTextHeader]" />
-                                  <Sequence DisplayName="Sequence - Type Product" sap:VirtualizedContainerService.HintSize="1252,275" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                  <Sequence DisplayName="Sequence - Type Product" sap:VirtualizedContainerService.HintSize="1297,276" sap2010:WorkflowViewState.IdRef="Sequence_97">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="strWebSatatus" />
                                     </Sequence.Variables>
@@ -864,7 +868,7 @@
                                         <InArgument x:TypeArguments="x:String">[row("WebStatus").ToString]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[strWebSatatus]" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[strWebSatatus]" sap:VirtualizedContainerService.HintSize="242,52" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1039,35 +1043,43 @@
                                       </Sequence>
                                     </Switch>
                                   </Sequence>
-                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into - SO-Net Value" EmptyField="True" sap:VirtualizedContainerService.HintSize="1252,134" sap2010:WorkflowViewState.IdRef="TypeInto_51" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;Net Value&quot;).ToString]">
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into - SO-Net Value" EmptyField="True" sap:VirtualizedContainerService.HintSize="1297,134" sap2010:WorkflowViewState.IdRef="TypeInto_51" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;Net Value&quot;).ToString]">
                                     <ui:TypeInto.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9ff938ac91de115e8ae16f84d6ba9cc2" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl id='content_txtOtherCost' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Info" Message="[&quot;&gt;&gt;&gt; SO-Net Value : &quot;+row(&quot;Net Value&quot;).ToString]" />
-                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into - RS" EmptyField="True" sap:VirtualizedContainerService.HintSize="1252,134" sap2010:WorkflowViewState.IdRef="TypeInto_52" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;GetDataNetPrice&quot;).ToString]">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1297,93" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Info" Message="[&quot;&gt;&gt;&gt; SO-Net Value : &quot;+row(&quot;Net Value&quot;).ToString]" />
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into - RS" EmptyField="True" sap:VirtualizedContainerService.HintSize="1297,134" sap2010:WorkflowViewState.IdRef="TypeInto_52" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;GetDataNetPrice&quot;).ToString]">
                                     <ui:TypeInto.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="88763a574895a1dcab878fa4cbea55e0" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl id='content_txtRSCost' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="Info" Message="[&quot;&gt;&gt;&gt; RS Net Price : &quot;+row(&quot;GetDataNetPrice&quot;).ToString]" />
-                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA  content_txtRe...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1252,134" sap2010:WorkflowViewState.IdRef="TypeInto_53" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;Create By&quot;).ToString]">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1297,93" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="Info" Message="[&quot;&gt;&gt;&gt; RS Net Price : &quot;+row(&quot;GetDataNetPrice&quot;).ToString]" />
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA  content_txtRe...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1297,134" sap2010:WorkflowViewState.IdRef="TypeInto_53" SendWindowMessages="False" SimulateType="True" Text="[row(&quot;Create By&quot;).ToString]">
                                     <ui:TypeInto.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5cf88cb98e8be819bfe19faddd7d0dc0" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl id='content_txtRemark' tag='TEXTAREA' /&gt;" WaitForReady="COMPLETE" />
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;&gt;&gt;&gt; User SAP : &quot;+row(&quot;Create By&quot;).ToString]" />
-                                  <Sequence DisplayName="Sequence - Attach File" sap:VirtualizedContainerService.HintSize="1297,52" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1297,93" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;&gt;&gt;&gt; User SAP : &quot;+row(&quot;Create By&quot;).ToString]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_87">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="ui:GenericValue">[l]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="ui:GenericValue">[0]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Sequence DisplayName="Sequence - Attach File" sap:VirtualizedContainerService.HintSize="1297,1554" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="ui:GenericValue" Name="strDateTime" />
                                     </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  content_filePO'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  content_filePO'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -1082,13 +1094,50 @@
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dfbc9498469ba29fedc22aedcf496a8c" Selector="&lt;html app='chrome.exe' title='Add SDS - BUC Document Management | SCG' /&gt;&lt;webctrl id='content_filePO' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
                                       </ui:Click.Target>
                                     </ui:Click>
-                                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_54" SendWindowMessages="False" SimulateType="False" Text="[in_Config(&quot;Path_PDF&quot;).ToString+strPONumber+&quot;.pdf[k(enter)]&quot;]">
+                                    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,750" sap2010:WorkflowViewState.IdRef="DoWhile_7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <DoWhile.Condition>[ck_AttachFile = False or l &lt;= 5]</DoWhile.Condition>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="358,587" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:UiElementExists DisplayName="Element Exists 'chrome.exe  Open'" Exists="[ck_AttachFile]" sap:VirtualizedContainerService.HintSize="336,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                                          <ui:UiElementExists.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c70306fb43c4e953280580b23ad82ac9" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                                          </ui:UiElementExists.Target>
+                                        </ui:UiElementExists>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="336,317" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_90">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="ui:GenericValue">[l]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="ui:GenericValue">[l+1]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_88" Level="Info" Message="[&quot;&gt;&gt;&gt; Count Check Attach File : &quot;+l.ToString]" />
+                                        </Sequence>
+                                      </Sequence>
+                                    </DoWhile>
+                                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DelayMS="1000" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_54" SendWindowMessages="False" SimulateType="False" Text="[in_Config(&quot;Path_PDF&quot;).ToString+strPONumber+&quot;.pdf[k(enter)]&quot;]">
                                       <ui:TypeInto.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="38b0c7afbe4a847def848137e0f095ab" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;" WaitForReady="COMPLETE" />
                                       </ui:TypeInto.Target>
                                     </ui:TypeInto>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[&quot;&gt;&gt;&gt; File Name : &quot;+strPONumber]" />
-                                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_78">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,93" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[&quot;&gt;&gt;&gt; File Name : &quot;+strPONumber]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_78">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="ui:GenericValue">[strDateTime]</OutArgument>
                                       </Assign.To>
@@ -1096,8 +1145,16 @@
                                         <InArgument x:TypeArguments="ui:GenericValue">[now.AddDays(0).ToString("dd/MM/yyyy") +" "+ system.DateTime.Now.ToString("hh:mm")]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:ExcelWriteCell Cell="[&quot;AA&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[strDateTime]" />
+                                    <ui:ExcelWriteCell Cell="[&quot;AA&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="464,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[strDateTime]" />
                                   </Sequence>
+                                  <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_91">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="ui:GenericValue">[l]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="ui:GenericValue">[0]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
                                   <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_45">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Int32">[countData]</OutArgument>
@@ -1305,7 +1362,7 @@
                                           </Assign.Value>
                                         </Assign>
                                         <ui:ExcelWriteCell Cell="[&quot;Z&quot;+(Idx+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="509,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[strStatusBot]" />
-                                        <Assign DisplayName="Assign - Status Data" sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_73">
+                                        <Assign DisplayName="Assign - Status Data" sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_73">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[strStatusData]</OutArgument>
                                           </Assign.To>
@@ -1533,7 +1590,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe SDS'" sap:VirtualizedContainerService.HintSize="1798,205" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="7ff987f1a1fba4eb194f2951f5af10a7" Selector="&lt;html app='chrome.exe' title='*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe SDS'" sap:VirtualizedContainerService.HintSize="1843,205" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="7ff987f1a1fba4eb194f2951f5af10a7" Selector="&lt;html app='chrome.exe' title='*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -1543,7 +1600,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="1798,106" sap2010:WorkflowViewState.IdRef="Click_70" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="1843,106" sap2010:WorkflowViewState.IdRef="Click_70" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -1558,7 +1615,7 @@
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ecbca7a1bcbd68be0ea418d5fde81a7a" Selector="&lt;html app='chrome.exe' title='SDS Dashboard - BUC Document Management | SCG' /&gt;&lt;webctrl aaname='SDS Report (Month List)' parentid='sidebar' tag='DIV' /&gt;" WaitForReady="COMPLETE" />
       </ui:Click.Target>
     </ui:Click>
-    <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="1798,106" sap2010:WorkflowViewState.IdRef="GetValue_14">
+    <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="1843,106" sap2010:WorkflowViewState.IdRef="GetValue_14">
       <ui:GetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="097ef178deeee8806fabc6ee93398be7" Selector="&lt;html app='chrome.exe' title='SDS Report - BUC Document Management | SCG' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="COMPLETE" />
       </ui:GetValue.Target>
@@ -1566,7 +1623,7 @@
         <OutArgument x:TypeArguments="x:String">[checkDataReport]</OutArgument>
       </ui:GetValue.Value>
     </ui:GetValue>
-    <If Condition="[checkDataReport.Contains(&quot;No data available in table&quot;)]" sap:VirtualizedContainerService.HintSize="1798,996" sap2010:WorkflowViewState.IdRef="If_22">
+    <If Condition="[checkDataReport.Contains(&quot;No data available in table&quot;)]" sap:VirtualizedContainerService.HintSize="1843,996" sap2010:WorkflowViewState.IdRef="If_22">
       <If.Then>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,93" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="Info" Message="[&quot;&gt;&gt;&gt; Not Found Data For Import&quot;]" />
       </If.Then>
@@ -1624,6 +1681,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1798,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; End...... BUC Fill Data&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1843,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;&gt; End...... BUC Fill Data&quot;]" />
   </Sequence>
 </Activity>
